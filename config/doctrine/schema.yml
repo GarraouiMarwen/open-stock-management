@@ -3,18 +3,18 @@ Seller:
   actAs: { Timestampable: ~ }
   columns:
     name: { type: string(255), notnull: true, unique: true }
-    address: { type: string(255)}
-    tp_hp: {type: integer}
-    tp_home: {type: integer}
+    address: { type: string(255) }
+    tp_hp: { type: integer }
+    tp_home: { type: integer }
     notes: { type: string(255) }
 
 Client:
   actAs: { Timestampable: ~ }
   columns:
     name: { type: string(255), notnull: true, unique: true }
-    address: { type: string(255)}
-    tp_hp: {type: integer}
-    tp_home: {type: integer}
+    address: { type: string(255) }
+    tp_hp: {type: integer }
+    tp_home: { type: integer }
     notes: { type: string(255) }
 
 PurchaseOrder:
@@ -22,24 +22,24 @@ PurchaseOrder:
   columns:
     seller_id: { type: integer, notnull: true }
     date_begin: { type: timestamp, notnull: true }
-    date_end: { type: timestamp}
-    total_price: { type: float}
-    total_paid: { type: float}
-    total_due: { type: float}
-    order_status: { type: integer}
+    date_end: { type: timestamp }
+    total_price: { type: float }
+    total_paid: { type: float }
+    total_due: { type: float }
+    order_status: { type: integer }
     notes: { type: string(255) }
   relations:
     Seller: { onDelete: CASCADE, local: seller_id, foreign: id }
 
-SalseOrder:
+SalesOrder:
   actAs: { Timestampable: ~ }
   columns:
     client_id: { type: integer, notnull: true }
     date_begin: { type: timestamp, notnull: true }
-    date_end: { type: timestamp}
-    total_price: { type: float}
-    total_paid: { type: float}
-    total_due: { type: float}
+    date_end: { type: timestamp }
+    total_price: { type: float }
+    total_paid: { type: float }
+    total_due: { type: float }
     order_status: { type: integer}
     notes: { type: string(255) }
   relations:
@@ -48,9 +48,9 @@ SalseOrder:
 Item:
   actAs: { Timestampable: ~ }
   columns:
-    name: { type: string(255) ,unique: true}
-    salse_unit_price: { type: float}
-    purchase_unit_price: { type: float}
+    name: { type: string(255) ,unique: true }
+    sales_unit_price: { type: float }
+    purchase_unit_price: { type: float }
     description: { type: string(255) }
     stock_available: { type: integer}
 
@@ -71,15 +71,15 @@ SalesItems:
     item_id: { type: integer, notnull: true }
     nos: { type: integer }
   relations:
-    SalseOrder: { onDelete: CASCADE, local: sales_order_id , foreign: id }
+    SalesOrder: { onDelete: CASCADE, local: sales_order_id , foreign: id }
     Item: { onDelete: CASCADE, local: item_id, foreign: id }
 
 Transport:
   actAs: { Timestampable: ~ }
   columns:
     transporter_name: { type: integer, notnull: true }
-    date_begin: { type: timestamp}
-    date_end: { type: timestamp}
+    date_begin: { type: timestamp }
+    date_end: { type: timestamp }
 
 PurchaseItemsTransport :
   columns:
@@ -91,13 +91,13 @@ PurchaseItemsTransport :
     Transport: { onDelete: CASCADE, local: transport_id, foreign: id }
 
 
-SalseItemsTransport :
+SalesItemsTransport :
   columns:
-    salse_item_id: {type: integer, notnull: true }
+    sales_item_id: {type: integer, notnull: true }
     transport_id: { type: integer, notnull: true }
     nos: { type: integer }
   relations:
-    SalseItems: { onDelete: CASCADE, local: salse_item_id  , foreign: id }
+    SalesItems: { onDelete: CASCADE, local: sales_item_id  , foreign: id }
     Transport:  { onDelete: CASCADE, local: transport_id, foreign: id }
 
 PurchasePayment :
@@ -116,26 +116,24 @@ TransportPayment :
     Transport: { onDelete: CASCADE, local: transport_id  , foreign: id }
     Payment:  { onDelete: CASCADE, local: payment_id, foreign: id }
 
-SalsePayment:
+SalesPayment:
   columns:
-    salse_order_id: { type: integer, notnull: true }
+    sales_order_id: { type: integer, notnull: true }
     payment_id: { type: integer, notnull: true }
   relations:
-    SalseOrder: { onDelete: CASCADE, local: salse_order_id  , foreign: id }
+    SalesOrder: { onDelete: CASCADE, local: sales_order_id  , foreign: id }
     Payment:  { onDelete: CASCADE, local: payment_id, foreign: id }
 
 ChequePayment:
   columns:
     payment_id: { type: integer, notnull: true }
-    bank_name : { type: string(255)}
-    status : { type: integer}
-    date_end : { type: timestamp}
+    bank_name : { type: string(255) }
+    status : { type: integer }
+    date_end : { type: timestamp }
 
 Payment:
   actAs: { Timestampable: ~ }
   columns:
-    amount: { type: float}
-    date: { type: timestamp}
+    amount: { type: float }
+    date: { type: timestamp }
     type: { type: integer }
-
-
