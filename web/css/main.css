@@ -75,7 +75,7 @@ body {
     height:54px;
     float:left;
     clear:both;
-    background-image:url(../images/menu_light.png);
+    background-image:url(../images/menu_back.png);
     background-repeat:repeat-x;
 }
 
@@ -145,7 +145,7 @@ body {
 }
 
 #menu a:hover{
-    background-image:url(../images/menu.png);
+    background-image:url(../images/menu_hover.png);
     background-repeat:repeat-x;
 }
 
