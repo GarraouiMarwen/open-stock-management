@@ -9,6 +9,6 @@
  */
 foreach ($data as $item) {
     echo $item->getName(). '<br /> ' ;
-    echo $item->getDescription();
+    echo $item->getDescription(). '<br /> ';
 }
 ?>

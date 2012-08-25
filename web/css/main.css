@@ -1,0 +1,161 @@
+/* Design by Jay Krish */
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font: 12px Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #061C37;
+    background: #F2F2F2;
+
+}
+*
+{
+    margin: 0 auto 0 auto;
+    text-align:left;
+}
+
+#container
+{
+    display: block; 
+    height:auto;
+    position: relative; 
+    width: 960px;
+
+    border:5px solid;
+    border-color: #E8E8E8;
+}
+
+
+#header
+{
+    height:50px;
+    width:960px;
+    background-color: #CACACA;
+
+}
+
+#header h1
+{
+    position:absolute;
+    text-align:left;
+    color:#FFFFFF;
+    font-size:30px;
+    color:#FFF;	
+    left:14px;
+    top:10px;
+}
+
+
+#header h2
+{
+    position:absolute;
+    text-align:right;
+    color:#EAEAEA;
+    left:490px;
+    top:30px;
+    width:400px;
+    font-size:15px;
+}
+
+
+.off
+{
+    color:#000000;
+}
+
+
+#menu
+{
+    display:block;
+    float:left;
+    clear:both;
+    width:960px;
+    height:54px;
+    float:left;
+    clear:both;
+    background-image:url(../images/menu_light.png);
+    background-repeat:repeat-x;
+}
+
+
+#content
+{
+    display:block;
+    float:left;
+    width:936px;
+    height:auto;
+    padding-left:5px;
+    padding-top:15px;
+    padding-right:10px;
+    padding-bottom:5px;
+    background:#E8E8E8;
+
+    border:5px solid;
+    border-color: #CACACA;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    -moz-border-radius:10px; /* Firefox 3.6 and earlier */
+}
+
+#footer
+{
+    width:inherit;
+    height:auto;
+}
+
+#footer h3 a,#footer h3 a:visited
+{
+    display:inline;
+    text-align:center;
+    font-size:12px;
+    text-decoration:none;
+    color:#FFF;
+}
+
+
+#menu ul {
+    list-style: none;
+    padding: 0px;
+    margin-left:auto;
+    width:960px;
+}
+
+#menu li {
+    list-style: none;
+    padding: 0px;	
+    display: inline; 
+
+}
+
+#menu a {
+    float: left;
+    height: 36px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 18px;
+    font-size: 15px;
+    padding-left:13px;
+    padding-right:13px;
+
+}
+
+#menu a:hover{
+    background-image:url(../images/menu.png);
+    background-repeat:repeat-x;
+}
+
+#content p
+{
+
+}
+
+
+html, body {
+    text-align: center;
+}
+p {text-align: left;}
