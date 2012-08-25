@@ -7,4 +7,8 @@
  * Template for addItemAction
  * 
  */
+foreach ($data as $item) {
+    echo $item->getName(). '<br /> ' ;
+    echo $item->getDescription();
+}
 ?>
