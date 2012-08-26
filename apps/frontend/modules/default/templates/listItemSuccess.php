@@ -6,16 +6,16 @@
         <?php foreach ($data as $item): ?>
             <tr class="item">
 
-            <a href="http://www.google.com">
-                <td class="name">
+            
+                <td class="name"><a href="http://www.google.com">
                     <?php echo $item->getName() ?>
+            </tr>            
                 </td>
                 <td class="description">
-                    <?php echo $item->getDescription() ?>
+                    <?php echo $item->getSalesUnitPrice()  ?>
                 </td>
-            </a>
+</a>
 
-            </tr>
         <?php endforeach ?>
 
     </table>
