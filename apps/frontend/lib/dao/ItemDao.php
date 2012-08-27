@@ -36,6 +36,24 @@ class ItemDao {
         }
     }
     
+    /**
+     * 
+     * @return Item Doctrine-Collection
+     * @throws DaoException 
+     */
+    public function getAllItems() {
+        try {
+            $query = Doctrine_Query::create()
+                        ->select('t.*')
+                        ->from('Item t')
+                        ->orderBy("t.name");
+            return $query->execute();
+        } catch (Exception $e) {
+            throw new DaoException($e->getMessage(), $e->getCode(), $e);
+        }
+    }
+
+
     public function updateItem(Item $item) {
         try {
             $query = Doctrine_Query::create()
