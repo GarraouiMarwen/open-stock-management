@@ -1,14 +1,11 @@
-<?php
+<?php include_component('stock', 'itemSidebar') ?>
+<?php use_stylesheet('stock/addItem.css') ?>
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- * 
- * Template for addItemAction
- * 
- */
+<div id="item_add">
+<?php
 foreach ($data as $item) {
     echo $item->getName(). '<br /> ' ;
     echo $item->getDescription(). '<br /> ';
 }
 ?>
+</div>

@@ -1,5 +1,6 @@
-<?php use_stylesheet('stock/listItem.css') ?>
 <?php include_component('stock', 'itemSidebar') ?>
+<?php use_stylesheet('stock/listItem.css') ?>
+
 <div id="item_list">
     <table class="item_list_table">
 
