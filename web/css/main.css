@@ -17,27 +17,27 @@ body
     text-align:left;
 }
 
-#container
+#main_container
 {
     display: block; 
     height:auto;
     position: relative; 
-    width: 960px;
+    width: 1200px;
 
     border:5px solid;
     border-color: #E8E8E8;
 }
 
 
-#header
+#main_header
 {
     height:50px;
-    width:960px;
+    width:1200px;
     background-color: #CACACA;
 
 }
 
-#header h1
+#main_header h1
 {
     position:absolute;
     text-align:left;
@@ -49,12 +49,12 @@ body
 }
 
 
-#header h2
+#main_header h2
 {
     position:absolute;
     text-align:right;
     color:#EAEAEA;
-    left:490px;
+    left:600px;
     top:30px;
     width:400px;
     font-size:15px;
@@ -67,10 +67,10 @@ body
 }
 
 
-#menu
+#main_menu
 {
     display:block;
-    width:960px;
+    width:1200px;
     height:54px;
 
     background-image:url(../images/menu_back.png);
@@ -78,15 +78,11 @@ body
 }
 
 
-#content
+#main_content
 {
-    width:940px;
-    height:500px;
+    width:1190px;
+    height:600px;
 
-    padding-left:5px;
-    padding-top:15px;
-    padding-right:5px;
-    padding-bottom:5px;
     background:#E8E8E8;
 
     border:5px solid;
@@ -96,14 +92,14 @@ body
     -moz-border-radius:10px; /* Firefox 3.6 and earlier */
 }
 
-#footer
+#main_footer
 {
     width:auto;
     height:10px;    
 
 }
 
-#footer h3 a,#footer h3 a:visited
+#main_footer h3 a,#main_footer h3 a:visited
 {
     position: absolute;
     left:880px;
@@ -112,7 +108,7 @@ body
 }
 
 
-#menu ul 
+#main_menu ul 
 {
     list-style: none;
     padding: 0px;
@@ -120,7 +116,7 @@ body
     width:960px;
 }
 
-#menu li 
+#main_menu li 
 {
     list-style: none;
     padding: 0px;	
@@ -128,10 +124,10 @@ body
 
 }
 
-#menu a 
+#main_menu a 
 {
     float: left;
-    height: 36px;
+    height: 54px;
     display: block;
     text-align: center;
     text-decoration: none;
@@ -144,13 +140,19 @@ body
 
 }
 
-#menu a:hover
+#main_menu a:hover
 {
     background-image:url(../images/menu_hover.png);
     background-repeat:repeat-x;
+    font-size: 18px;
+    padding-top: 15px;
+    border:0px solid;
+    border-color: none;
+    border-radius: 10px;
+    -moz-border-radius:10px; /* Firefox 3.6 and earlier */
 }
 
-#content p
+#main_content p
 {
 
 }

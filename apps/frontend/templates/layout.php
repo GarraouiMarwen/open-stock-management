@@ -10,14 +10,14 @@
     </head>
     <body>
 
-        <div id="container">
+        <div id="main_container">
 
-            <div id="header">
+            <div id="main_header">
                 <h1>Web<span class="off">app</span></h1>
                 <h2>template by -jaykrish</h2>
             </div>   
 
-            <div id="menu">
+            <div id="main_menu">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Sales</a></li>
@@ -29,12 +29,13 @@
                 </ul>
             </div>
 
-            <div id="content">
+            <div id="main_content">
 
                 <?php echo $sf_content ?>
 
             </div>
-            <div id="footer"><h3><a href="#">Neat web design</a></h3></div>
+            
+            <div id="main_footer"><h3><a href="#">Neat web design</a></h3></div>
 
         </div>
     </body>

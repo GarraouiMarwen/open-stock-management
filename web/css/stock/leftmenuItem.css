@@ -1,0 +1,96 @@
+/* 
+    Document   : leftmenuItem.css
+    Created on : Aug 30, 2012, 2:41:37 PM
+    Author     : jaykrish
+    Description:
+        Purpose of the stylesheet follows.
+*/
+#item_leftmenu
+{
+    position: absolute;
+    width:120px;
+    height:600px;
+ /*   background-image:url(../../images/left_menu.png);
+    background-repeat:repeat-y; */
+ background-color: #CACACA;
+
+}
+
+#item_leftmenu_top
+{
+    height:54px;
+}   
+
+
+
+#item_leftmenu ul 
+{
+    list-style: none;
+    padding: 0px;
+
+}
+
+#item_leftmenu li 
+{
+
+    list-style: none;
+    padding: 0px;     
+    height: 54px;
+    width:120px;
+
+    background-image:url(../../images/menu_back.png);
+    background-repeat:repeat-x;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+    border:0px solid;
+    border-color: #CACACA;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px;
+    -moz-border-radius:10px; /* Firefox 3.6 and earlier */
+
+}
+
+
+
+#item_leftmenu li a 
+{
+
+
+    height: 54px;
+
+    display: block;
+    padding-right:15px;
+    text-align:right;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 18px;
+    font-size: 15px;
+
+
+}
+
+#item_leftmenu li:hover
+{
+    background-image:url(../../images/menu_hover.png);
+    background-repeat:repeat-x;
+
+    width:120px;
+
+    border:0px solid;
+    border-color: #CACACA;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius:0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px;
+    -moz-border-radius:0px; /* Firefox 3.6 and earlier */
+}
+
+#item_leftmenu a:hover
+{
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+

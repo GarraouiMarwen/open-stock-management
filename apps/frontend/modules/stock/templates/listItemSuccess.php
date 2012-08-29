@@ -1,20 +1,21 @@
-<?php use_stylesheet('default/listItem.css') ?>
-
-<div id="items">
-    <table class="items">
+<?php use_stylesheet('stock/listItem.css') ?>
+<?php include_component('stock', 'itemSidebar') ?>
+<div id="item_list">
+    <table class="item_list_table">
 
         <?php foreach ($data as $item): ?>
-            <tr class="item">
+            <tr class="list_table_row">
 
-            
+
                 <td class="name"><a href="http://www.google.com">
-                    <?php echo $item->getName() ?>
-            </tr>            
+                        <?php echo $item->getName() ?>
                 </td>
-                <td class="description">
-                    <?php echo $item->getSalesUnitPrice()  ?>
-                </td>
-</a>
+                </tr>
+            <tr>            
+            <td class="description">
+                <?php echo $item->getSalesUnitPrice() ?>
+            </td>
+            </tr>
 
         <?php endforeach ?>
 
