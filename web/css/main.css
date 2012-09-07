@@ -5,10 +5,10 @@ body
     margin: 0;
     padding: 0;
     text-align: left;
-    font: 12px Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font: 16px Arial, Helvetica, sans-serif;
+    font-size: 16px;
     color: #061C37;
-    background: #F2F2F2;
+  /*  background: #F2F2F2;*/
 
 }
 *
@@ -24,8 +24,8 @@ body
     position: relative; 
     width: 1200px;
 
-    border:5px solid;
-    border-color: #E8E8E8;
+    border:1px solid;
+    border-color:#ADC8FE;
 }
 
 
@@ -33,7 +33,7 @@ body
 {
     height:50px;
     width:1200px;
-    background-color: #CACACA;
+    background-color: #EBF2FF;
 
 }
 
@@ -83,10 +83,10 @@ body
     width:1190px;
     height:600px;
 
-    background:#E8E8E8;
+   /* background:#E8E8E8;*/
 
     border:5px solid;
-    border-color: #CACACA;
+    border-color: #D5E3FF;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius:10px;
     -moz-border-radius:10px; /* Firefox 3.6 and earlier */

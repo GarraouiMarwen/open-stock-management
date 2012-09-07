@@ -23,6 +23,7 @@ class listItemAction extends sfAction{
 
         $data = $query->execute();
         $this->data = $data;
+  
     }
 }
 ?>
