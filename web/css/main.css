@@ -152,6 +152,18 @@ body
     -moz-border-radius:10px; /* Firefox 3.6 and earlier */
 }
 
+#main_menu a#selected_main_menu
+{
+    background-image:url(../images/menu_selected.png);
+    background-repeat:repeat-x;
+    font-size: 18px;
+    padding-top: 15px;
+    border:0px solid;
+    border-color: none;
+    border-radius: 10px;
+    -moz-border-radius:10px; /* Firefox 3.6 and earlier */
+}
+
 #main_content p
 {
 
