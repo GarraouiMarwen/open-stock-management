@@ -47,7 +47,7 @@
             <div id="main_menu">
                 <ul>
 
-                    <li><a <?php setID_IfActive('default', $pageOn) ?> href="<?php echo url_for('default/index') ?>">Home</a></li>
+                    <li><a <?php setID_IfActive('default', $pageOn) ?> href="<?php echo url_for('default/progressHome') ?>">Home</a></li>
                     <li><a <?php setID_IfActive('sales', $pageOn) ?> href="<?php echo url_for('sales/listSales') ?>">Sales</a></li>
                     <li><a <?php setID_IfActive('purchase', $pageOn) ?> href="<?php echo url_for('purchase/listPurchase') ?>">Purchase</a></li>
                     <li><a <?php setID_IfActive('payment', $pageOn) ?> href="<?php echo url_for('payment/listPayment') ?>">Payment</a></li>
