@@ -32,7 +32,7 @@
 
         <!--get the current page name for title-->
         <title>
-            <?php include_slot('pageinfo') ?>
+            <?php include_slot('pageinfo'); ?>
         </title>
     </head>
     <body>

@@ -12,17 +12,26 @@
  */
 class listItemAction extends sfAction{
     
+    private $itemService;
+
+    /**
+     * 
+     * @return ItemService 
+     */
+    public function getItemService() {
+        if (!($this->itemService instanceof ItemService)) {
+            $this->itemService = new ItemService();
+        }
+        return $this->itemService;
+    }
+
     /**
      * Execute /../default/listItem
      * 
      * @param type $request 
      */
     public function execute($request) {
-        $query = Doctrine_Core::getTable('Item')
-                ->createQuery('i');
-
-        $data = $query->execute();
-        $this->data = $data;
+        $this->data = $this->getItemService()->getAllItems();     
   
     }
 }

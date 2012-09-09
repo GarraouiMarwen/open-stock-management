@@ -10,7 +10,9 @@ class ItemService {
     private $itemDao = null;
     
     public function __construct() {
-        $this->itemDao = new ItemDao();
+        if (!($this->itemDao instanceof ItemDao)) {
+            $this->itemDao = new ItemDao();
+        }        
     }
     
     /**
@@ -18,6 +20,9 @@ class ItemService {
      * @return type 
      */
     public function getItemDao() {
+        if (!($this->itemDao instanceof ItemDao)) {
+            $this->itemDao = new ItemDao();
+        }
         return $this->itemDao;
     }
     
