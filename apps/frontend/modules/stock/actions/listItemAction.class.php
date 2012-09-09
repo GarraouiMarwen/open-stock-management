@@ -26,7 +26,7 @@ class listItemAction extends sfAction{
     }
 
     /**
-     * Execute /../default/listItem
+     * Execute /../stock/listItem
      * 
      * @param type $request 
      */
