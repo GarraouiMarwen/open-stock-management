@@ -2,15 +2,26 @@
 <div id="left_sidebar">    
 
     <div id="left_sidebar_top">
-
+       
     </div>
-    
+
     <div id="left_sidebar_content">
+        
         <ul>
-            <li><a href="#"><?php echo $a ?></a></li> 
-            <li><a href="#"><?php echo$b ?></a></li>
-            <li><a href="#"><?php echo$c ?></a></li>
+            <?php
+            
+            $CurrentUri=sfContext::getInstance()->getRouting()->getCurrentInternalUri();
+            $count = 1;
+            $key = "menu" . $count;
+            while (isset($$key)) {
+                list($name, $link) = explode(";", $$key);
+                echo "<li ".phpUtils::setID_IfActive($link, $CurrentUri)."><a href=\"" . url_for($link) . "\">" . $name . "</a></li>";
+                $count++;
+                $key = "menu" . $count;
+            }
+            ?>
         </ul>
+        
     </div>
 
 </div>

@@ -8,7 +8,7 @@ body
     font: 16px Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #061C37;
-  /*  background: #F2F2F2;*/
+    /*  background: #F2F2F2;*/
 
 }
 *
@@ -25,7 +25,7 @@ body
     width: 1200px;
 
     border:1px solid;
-    border-color:#ADC8FE;
+    border-color:#768b9b;
 }
 
 
@@ -80,23 +80,23 @@ body
 
 #main_content
 {
-    width:1190px;
+    width:1200px;
     height:600px;
 
-   /* background:#E8E8E8;*/
+    /* background:#E8E8E8;*/
 
-    border:5px solid;
-    border-color: #D5E3FF;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius:10px;
-    -moz-border-radius:10px; /* Firefox 3.6 and earlier */
+    /* border:5px solid;
+     border-color: #D5E3FF;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius:10px;
+     -moz-border-radius:10px; /* Firefox 3.6 and earlier */
 }
 
 #main_footer
 {
     width:auto;
     height:10px;    
-
+    background-color: #7396a9;  
 }
 
 #main_footer h3 a,#main_footer h3 a:visited
@@ -152,7 +152,7 @@ body
     -moz-border-radius:10px; /* Firefox 3.6 and earlier */
 }
 
-#main_menu a#selected_main_menu
+#main_menu a#selected
 {
     background-image:url(../images/menu_selected.png);
     background-repeat:repeat-x;
