@@ -8,6 +8,8 @@
 /**
  * Description of progressHome
  *
+ * @package    open-stock-management
+ * @subpackage default
  * @author jaykrish
  */
 class progressHomeAction extends sfAction {

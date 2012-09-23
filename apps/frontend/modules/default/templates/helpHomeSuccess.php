@@ -11,5 +11,5 @@
 include_component("commons", "leftSidebar",array("menu1"=>"MyHome;default/myHome" ,"menu2"=>"Progress;default/progressHome","menu3"=>"Help;default/helpHome"));
 
 
-echo 'TODO progressHome';
+echo 'TODO helpHome';
 ?>

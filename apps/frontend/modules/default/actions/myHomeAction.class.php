@@ -6,21 +6,21 @@
  */
 
 /**
- * Description of listPurchaseAction
+ * Description of myHomeAction
  *
  * @package    open-stock-management
- * @subpackage purchase
+ * @subpackage default
  * @author jaykrish
  */
-class listPurchaseAction extends sfAction{
+class myHomeAction extends sfAction {
     //put your code here
-            /**
-     * Execute /../purchase/listPurchase
+       /**
+     * Execute /../default/mysHome
      * 
      * @param type $request 
      */
-    public function execute($request) {
-             
+    public function execute($requet){
+        
     }
 }
 

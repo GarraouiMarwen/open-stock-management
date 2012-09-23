@@ -9,6 +9,8 @@
  * Description of listSalesAction
  *
  * @author jaykrish
+  * @package    open-stock-management
+ * @subpackage sales
  */
 class listSalesAction extends sfAction{
     //put your code here

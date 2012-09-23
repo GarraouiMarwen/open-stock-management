@@ -6,16 +6,16 @@
  */
 
 /**
- * Description of listPurchaseAction
+ * Description of reviewSalesAction
  *
  * @package    open-stock-management
- * @subpackage purchase
+ * @subpackage sales
  * @author jaykrish
  */
-class listPurchaseAction extends sfAction{
+class reviewSalesAction extends sfAction{
     //put your code here
             /**
-     * Execute /../purchase/listPurchase
+     * Execute /../sales/reviewSales
      * 
      * @param type $request 
      */

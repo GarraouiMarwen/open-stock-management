@@ -6,22 +6,24 @@
  */
 
 /**
- * Description of listPurchaseAction
+ * Description of newPurchaseAction
  *
  * @package    open-stock-management
  * @subpackage purchase
  * @author jaykrish
  */
-class listPurchaseAction extends sfAction{
+class newPurchaseAction extends sfAction {
+
     //put your code here
-            /**
-     * Execute /../purchase/listPurchase
+    /**
+     * Execute /../purchase/newPurchase
      * 
      * @param type $request 
      */
     public function execute($request) {
-             
+        
     }
+
 }
 
 ?>
