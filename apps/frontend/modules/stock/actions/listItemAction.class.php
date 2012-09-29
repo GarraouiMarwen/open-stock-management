@@ -31,8 +31,19 @@ class listItemAction extends sfAction{
      * @param type $request 
      */
     public function execute($request) {
-        $this->data = $this->getItemService()->getAllItems();     
-  
+        $data = $this->getItemService()->getAllItems();     
+        
+        $listContainer = new ListContainer();
+        $listContainer->setHeaders(array (
+            "Number",
+            "Item Name",
+            "Stock",
+            "Unit Price"
+        ));
+        $listContainer->setList($data);
+        
+        viewListComponent::setContainer($listContainer);
+        
     }
 }
 ?>
