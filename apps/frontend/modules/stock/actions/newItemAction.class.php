@@ -6,14 +6,14 @@
  */
 
 /**
- * Description of addItemAction
+ * Description of newItemAction
  *
  * @author guruce
  */
-class addItemAction extends sfAction{
+class newItemAction extends sfAction{
     
     /**
-     * Execute /../default/addItem
+     * Execute /../default/newdItem
      * 
      * @param type $request 
      */

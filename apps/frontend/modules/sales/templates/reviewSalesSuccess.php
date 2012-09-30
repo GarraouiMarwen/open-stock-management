@@ -13,5 +13,5 @@
 include_component("commons", "leftSidebar", array("menu1" => "NewSales;sales/newSales", "menu2" => "AllSales;sales/listSales", "menu3" => "Review;sales/reviewSales"));
 
 
-echo 'TODO reviewSales';
+echo 'testing reviewSales. OK';
 ?>

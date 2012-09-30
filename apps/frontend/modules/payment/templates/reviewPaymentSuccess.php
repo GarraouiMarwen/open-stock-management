@@ -6,5 +6,5 @@
  */
 include_component("commons", "leftSidebar", array("menu1" => "NewPayment;payment/newPayment", "menu2" => "Allpayments;payment/listPayment", "menu3" => "Review;payment/reviewPayment"));
 
-echo 'test listPayment. OK' ;
+echo 'test review Payment. OK' ;
 ?>

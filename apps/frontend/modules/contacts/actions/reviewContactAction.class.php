@@ -10,7 +10,7 @@
  *
  * @author satthy
  */
-class reviewAction extends sfAction{
+class reviewContactAction extends sfAction{
     //put your code here
     public function execute($request) {
         

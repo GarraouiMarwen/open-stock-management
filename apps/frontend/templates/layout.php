@@ -38,7 +38,7 @@
                     <li><a <?php echo phpUtils::setID_IfActive('purchase', $pageOn) ?> href="<?php echo url_for('purchase/listPurchase') ?>">Purchase</a></li>
                     <li><a <?php echo phpUtils::setID_IfActive('payment', $pageOn) ?> href="<?php echo url_for('payment/listPayment') ?>">Payment</a></li>
                     <li><a <?php echo phpUtils::setID_IfActive('transport', $pageOn) ?> href="<?php echo url_for('transport/listTransport') ?>">Transport</a></li>
-                    <li><a <?php echo phpUtils::setID_IfActive('contacts', $pageOn) ?> href="<?php echo url_for('contacts/homeContacts') ?>">Contacts</a></li>
+                    <li><a <?php echo phpUtils::setID_IfActive('contacts', $pageOn) ?> href="<?php echo url_for('contacts/listContact') ?>">Contacts</a></li>
                     <li><a <?php echo phpUtils::setID_IfActive('stock', $pageOn) ?> href="<?php echo url_for('stock/listItem') ?>">Stock</a></li>
                 </ul>
             </div>

@@ -12,6 +12,6 @@
 include_component("commons", "leftSidebar",array("menu1"=>"NewPurchase;purchase/newPurchase" ,"menu2"=>"AllPurchases;purchase/listPurchase","menu3"=>"Review;purchase/reviewPurchase"));
 
 
-echo 'TODO newPurchases';
+echo 'Testing  newPurchases.OK';
 
 ?>
