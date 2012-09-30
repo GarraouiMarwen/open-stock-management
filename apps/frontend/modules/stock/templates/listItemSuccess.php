@@ -8,7 +8,7 @@
     <div id="table_options">
     </div>
     
-    <?php include_component('commons', 'viewList'); ?>
+    <?php include_component('commons', 'viewList',array("container"=>$list)); ?>
     
 
 </div>

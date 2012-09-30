@@ -42,7 +42,7 @@ class listItemAction extends sfAction{
         ));
         $listContainer->setList($data);
         
-        viewListComponent::setContainer($listContainer);
+        $this->list=$listContainer;
         
     }
 }

@@ -4,15 +4,15 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-class commonsComponents extends sfComponents
+class leftSidebarComponent extends sfComponent
 {
-  public function executeDefault()
+  public function execute($request)
   {
   }
- 
+ /*
   public function executeLeftSidebar()
   {
 
-  }
+  }*/
 }
 ?>

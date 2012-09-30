@@ -10,11 +10,12 @@
  *
  * @author guruce
  */
-class viewListComponent extends sfComponent {
+class viewListComponent extends sfComponent{
     
     protected static $listContainer;
     
     public function execute($request) {
+        self::setContainer($this->container);
         $this->headers = self::$listContainer->getHeaders();
         $this->listContents = self::$listContainer->getList();
     }
