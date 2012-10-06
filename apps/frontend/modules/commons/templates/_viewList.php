@@ -14,21 +14,15 @@
         </thead>
         
         <tbody>
-            
+            <tr>
             <?php 
-            print_r($listContents);
-            ?>
+            
+            foreach ($listContents as $listContentVal) { 
+                    echo '<td>' . $listContentVal['name'] . '</td>';
+            }
+             ?>
+            </tr>
         </tbody>
     </table>
 </div>
 
-<?php
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-//echo '<pre>';
-//print_r($headers);
-//echo '<br />';
-//print_r($listContents);
-?>

@@ -94,7 +94,7 @@ class ItemDao {
                         ->select($searchParam)
                         ->from('item')
                         ->orderBy('name');
-            return $query->execute(array() , Doctrine::HYDRATE_SCALAR);
+            return $query->execute(array() , Doctrine::HYDRATE_ARRAY);
         } catch (Exception $e) {
             throw new DaoException($e->getMessage(), $e->getCode(), $e);
         }

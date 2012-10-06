@@ -31,10 +31,12 @@ class listItemAction extends sfAction{
      * @param type $request 
      */
     public function execute($request) {
-        $searchParameters = 'id, name, sales_unit_price, purchase_unit_price, description, stock_available';
+        $loadContents = sfYaml::load(sfConfig::get('sf_app_dir') . '/lib/list/Lists.yml');
+        $searchParameters = implode(",", $loadContents['listItem_ItemList']['content']);
         $data = $this->getItemService()->searchItems($searchParameters); 
+        
         $listContainer = new ListContainer();
-        $listContainer->setListName('ItemList');
+        $listContainer->setListName('listItem_ItemList');
 //        $listContainer->setHeaders(array (
 //            "Number",
 //            "Item Name",

@@ -1,5 +1,5 @@
 ## YAML Template.
-ItemList:
+listItem_ItemList:
   header: 
     hearder1: Number
     hearder2: Item Name
@@ -7,6 +7,13 @@ ItemList:
     hearder5: Purchase unit price  
     hearder6: Description
     hearder7: Store Available
-
+  content: 
+    content1: id 
+    content2: name
+    content4: sales_unit_price 
+    content5: purchase_unit_price  
+    content6: description
+    content7: stock_available
+    
 
 
