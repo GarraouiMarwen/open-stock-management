@@ -31,18 +31,21 @@ class listItemAction extends sfAction{
      * @param type $request 
      */
     public function execute($request) {
-        $data = $this->getItemService()->getAllItems();     
-        
+        $searchParameters = 'id, name, sales_unit_price, purchase_unit_price, description, stock_available';
+        $data = $this->getItemService()->searchItems($searchParameters); 
         $listContainer = new ListContainer();
-        $listContainer->setHeaders(array (
-            "Number",
-            "Item Name",
-            "Stock",
-            "Unit Price"
-        ));
-        $listContainer->setList($data);
+        $listContainer->setListName('ItemList');
+//        $listContainer->setHeaders(array (
+//            "Number",
+//            "Item Name",
+//            "Sales unit Price",
+//            "Purchase unit price",
+//            "Description",
+//            "Store Available"
+//        ));
+        $listContainer->setListContent($data);
         
-        $this->list=$listContainer;
+        $this->list = $listContainer;
         
     }
 }

@@ -59,8 +59,20 @@ class ItemService {
         return $this->itemDao->getAllItems();
     }
     
+    /**
+     *
+     * @param Item $item 
+     */
     public function updateItem(Item $item) {
         
+    }
+    
+   /**
+    * Get data according to searching parameters
+    * @param type $searchParam 
+    */
+    public function searchItems($searchParam) {
+        return $this->getItemDao()->searchItems($searchParam);
     }
     
 }

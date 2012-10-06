@@ -6,7 +6,7 @@ use_stylesheet('stock/listItem.css'); ?>
     <div id="table_options">
     </div>
     
-    <?php include_component('commons', 'viewList',array("container"=>$list)); ?>
+    <?php include_component('commons', 'viewList', array("container"=>$list)); ?>
     
 
 </div>

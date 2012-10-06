@@ -44,16 +44,27 @@ class ItemDao {
     public function getAllItems() {
         try {
             $query = Doctrine_Query::create()
-                        ->select('t.*')
-                        ->from('Item t')
-                        ->orderBy("t.name");
-            return $query->execute();
+                        ->select('
+                            id, 
+                            name, 
+                            sales_unit_price, 
+                            purchase_unit_price, 
+                            description, 
+                            stock_available')
+                        ->from('item')
+                        ->orderBy("name");
+            return $query->execute(array() , Doctrine::HYDRATE_SCALAR);
         } catch (Exception $e) {
             throw new DaoException($e->getMessage(), $e->getCode(), $e);
         }
     }
 
-
+    /**
+     *
+     * @param Item $item
+     * @return type
+     * @throws DaoException 
+     */
     public function updateItem(Item $item) {
         try {
             $query = Doctrine_Query::create()
@@ -71,5 +82,22 @@ class ItemDao {
         }
     }
     
+    /**
+     * Get data according to searching parameters
+     * @param type $searchParam
+     * @return type
+     * @throws DaoException 
+     */
+    public function searchItems($searchParam) {
+        try {
+            $query = Doctrine_Query::create()
+                        ->select($searchParam)
+                        ->from('item')
+                        ->orderBy('name');
+            return $query->execute(array() , Doctrine::HYDRATE_SCALAR);
+        } catch (Exception $e) {
+            throw new DaoException($e->getMessage(), $e->getCode(), $e);
+        }
+    }
     
 }

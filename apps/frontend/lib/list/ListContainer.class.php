@@ -13,7 +13,8 @@
 class ListContainer {
     private $headers;
     private $listContents;
-    
+    private $listName;
+
     /**
      * Gives array of headers
      * @return Array  
@@ -34,7 +35,7 @@ class ListContainer {
      * Get arrays of List contents
      * @return List 
      */
-    public function getList() {
+    public function getListContent() {
         return $this->listContents;
     }
     
@@ -42,9 +43,27 @@ class ListContainer {
      * Set array of list contents
      * @param type $listContent 
      */
-    public function setList($listContent) {
+    public function setListContent($listContent) {
         $this->listContents = $listContent;
     }
-            
+    
+    /**
+     * setting List Name then it will fetch correspondent header for that name
+     * @param type $listName 
+     */
+    public function setListName($listName) {
+        $this->listName = $listName;
+        $loadLists = sfYaml::load(sfConfig::get('sf_app_dir') . '/lib/list/Lists.yml');
+        $this->setHeaders($loadLists[$listName]['header']);        
+    }
+    
+    /**
+     * Get Name of the List
+     * @return type 
+     */
+    public function getListName() {
+        return $this->listName;
+    }
+    
 }
 
