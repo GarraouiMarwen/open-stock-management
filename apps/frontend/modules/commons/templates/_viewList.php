@@ -7,7 +7,7 @@
             <tr>
                 <?php
                 foreach ($headers as $headerVal) { 
-                    echo '<th>' . $headerVal . '</th>';
+                    echo '<th width=' . $headerVal['width'] . '>' . $headerVal['name'] . '</th>';
                 }
                 ?>
             </tr>
