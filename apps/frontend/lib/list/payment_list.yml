@@ -1,0 +1,49 @@
+## YAML Template.
+listItem:
+  header: 
+    hearder1: 
+      name: Id
+      width: 5%
+      sortField: itemId
+      elementType: link   
+      elementProperty:    
+    hearder2: 
+      name: Item Name
+      width: 25%
+      sortField: itemName
+      elementType: link   
+      elementProperty:       
+    hearder4: 
+      name: Unit Sales Price 
+      width: 15%
+      sortField: unitPrice
+      elementType: link   
+      elementProperty: 
+    hearder5: 
+      name: Unit Purchase price  
+      width: 15%
+      sortField: unitPurchasePrice
+      elementType: link   
+      elementProperty:
+    hearder6: 
+      name: Description
+      width: 25%
+      sortField: unitSalesPrice
+      elementType: link   
+      elementProperty:
+    hearder7: 
+      name: Store Available
+      width: 15%
+      sortField: storeAvailable
+      elementType: link   
+      elementProperty:
+  content: 
+    content1: id 
+    content2: name
+    content4: sales_unit_price 
+    content5: purchase_unit_price  
+    content6: description
+    content7: stock_available
+    
+
+

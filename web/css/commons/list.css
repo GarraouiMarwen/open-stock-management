@@ -1,0 +1,41 @@
+/* 
+    Document   : list
+    Created on : Oct 8, 2012, 3:55:52 AM
+    Author     : jaykrish
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#list_table
+{
+    width:auto;
+    height:auto;
+}
+#list_table .head tr
+{
+    background-color: #E8E8E8;
+     border:2px solid;
+    border-color: #E8E8E8;
+    border-radius: 5px;
+}
+#list_table .body tr
+{
+    height: 30px;
+    background-image: url("../../images/raw_back.png");
+    background-repeat: repeat-x;
+    
+    border:2px solid;
+    border-color: #E8E8E8;
+    border-radius: 5px;
+}
+
+
+
+.items .name a:hover
+{
+    text-decoration: underline;
+}
+
+
+
+

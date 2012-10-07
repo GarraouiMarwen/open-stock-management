@@ -10,8 +10,8 @@
  *
  * @author JayKrish
  */
-class listItemAction extends sfAction{
-    
+class listItemAction extends sfAction {
+
     private $itemService;
 
     /**
@@ -31,24 +31,19 @@ class listItemAction extends sfAction{
      * @param type $request 
      */
     public function execute($request) {
-        $loadContents = sfYaml::load(sfConfig::get('sf_app_dir') . '/lib/list/Lists.yml');
-        $searchParameters = implode(",", $loadContents['listItem_ItemList']['content']);
-        $data = $this->getItemService()->searchItems($searchParameters); 
-        
+       $head = sfYaml::load(sfConfig::get('sf_app_dir') . '/lib/list/item_list.yml');
+       $itemlist_headers = array($head['listItem']['header1'],$head['listItem']['header2'],$head['listItem']['header3'],$head['listItem']['header6']);
+        $columns = 'name,sales_unit_price,stock_available';
+        $itemlist_data = $this->getItemService()->getlistItems($columns);
+
         $listContainer = new ListContainer();
-        $listContainer->setListName('listItem_ItemList');
-//        $listContainer->setHeaders(array (
-//            "Number",
-//            "Item Name",
-//            "Sales unit Price",
-//            "Purchase unit price",
-//            "Description",
-//            "Store Available"
-//        ));
-        $listContainer->setListContent($data);
-        
-        $this->list = $listContainer;
-        
+        $listContainer->setListName('ItemList');
+        $listContainer->setListHeaders($itemlist_headers);
+        $listContainer->setListContent($itemlist_data);
+
+        $this->listcontainer = $listContainer;
     }
+
 }
+
 ?>

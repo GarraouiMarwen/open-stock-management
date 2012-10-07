@@ -11,7 +11,7 @@
  * @author guruce
  */
 class ListContainer {
-    private $headers;
+    private $listheaders;
     private $listContents;
     private $listName;
 
@@ -19,7 +19,7 @@ class ListContainer {
      * Gives array of headers
      * @return Array  
      */
-    public function getHeaders() {
+    public function getListHeaders() {
         return $this->headers;
     }
     
@@ -27,7 +27,7 @@ class ListContainer {
      * Set headers for list
      * @param type $headers 
      */
-    public function setHeaders($headers) {
+    public function setListHeaders($headers) {
         $this->headers = $headers;
     }
     
@@ -53,8 +53,6 @@ class ListContainer {
      */
     public function setListName($listName) {
         $this->listName = $listName;
-        $loadLists = sfYaml::load(sfConfig::get('sf_app_dir') . '/lib/list/Lists.yml');
-        $this->setHeaders($loadLists[$listName]['header']);        
     }
     
     /**

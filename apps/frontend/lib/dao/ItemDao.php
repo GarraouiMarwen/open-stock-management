@@ -41,19 +41,13 @@ class ItemDao {
      * @return Item Doctrine-Collection
      * @throws DaoException 
      */
-    public function getAllItems() {
+    public function getAllItems($columns) {
         try {
             $query = Doctrine_Query::create()
-                        ->select('
-                            id, 
-                            name, 
-                            sales_unit_price, 
-                            purchase_unit_price, 
-                            description, 
-                            stock_available')
+                        ->select($columns)
                         ->from('item')
                         ->orderBy("name");
-            return $query->execute(array() , Doctrine::HYDRATE_SCALAR);
+            return $query->execute(array() , Doctrine::HYDRATE_NONE);
         } catch (Exception $e) {
             throw new DaoException($e->getMessage(), $e->getCode(), $e);
         }

@@ -12,23 +12,13 @@
  */
 class viewListComponent  extends sfComponent {
     
-    protected static $listContainer;
-    
+  
     public function execute($request) {
-        self::setContainer($this->container);
-        $this->headers = $this->container->getHeaders();
+        $this->listName = $this->container->getListName();
+        $this->listHeaders = $this->container->getListHeaders();
         $this->listContents = $this->container->getListContent();
     }
-    
-    public static function setContainer(ListContainer $listContainer) {
-        self::$listContainer = $listContainer;
-    }
-    
-    public static function getContainer() {
-        return self::$listContainer;
-    }
-    
-    // TODO If u need create any methods 
+          // TODO If u need create any methods 
 }
 
 ?>
