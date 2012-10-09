@@ -12,11 +12,12 @@
  */
 class viewListComponent  extends sfComponent {
     
-  
+    
     public function execute($request) {
         $this->listName = $this->container->getListName();
         $this->listHeaders = $this->container->getListHeaders();
         $this->listContents = $this->container->getListContent();
+        $this->pager = $this->container->getPager();
     }
           // TODO If u need create any methods 
 }

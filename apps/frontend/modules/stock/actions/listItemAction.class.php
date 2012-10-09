@@ -31,15 +31,37 @@ class listItemAction extends sfAction {
      * @param type $request 
      */
     public function execute($request) {
+        
        $head = sfYaml::load(sfConfig::get('sf_app_dir') . '/lib/list/item_list.yml');
        $itemlist_headers = array($head['listItem']['header1'],$head['listItem']['header2'],$head['listItem']['header3'],$head['listItem']['header6']);
         $columns = 'name,sales_unit_price,stock_available';
-        $itemlist_data = $this->getItemService()->getlistItems($columns);
-
+        
+        $recordsLimit = 3; //have to take from lists
+        if (!$request->hasParameter('pageNo')) {
+            $pageNo = 1;
+        } else {
+            $pageNo = $request->getParameter('pageNo', 1);
+        }
+        
+        $pager = new SimplePager('Item', $recordsLimit);
+        $pager->setPage($pageNo);
+        $pager->setNumResults($this->getItemService()->countItems());
+        $pager->init();
+        $offset = $pager->getOffset();
+        $offset = empty($offset) ? 1 : $offset;
+        
+        $paramHolder = new sfParameterHolder();
+        $paramHolder->set('columns', $columns);
+        $paramHolder->set('offset', $offset);
+        $paramHolder->set('limit', $recordsLimit);
+        
+        $itemlist_data = $this->getItemService()->searchItems($paramHolder);
+        
         $listContainer = new ListContainer();
         $listContainer->setListName('ItemList');
         $listContainer->setListHeaders($itemlist_headers);
         $listContainer->setListContent($itemlist_data);
+        $listContainer->setPager($pager);
 
         $this->listcontainer = $listContainer;
     }

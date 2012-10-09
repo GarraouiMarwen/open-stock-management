@@ -1,25 +1,29 @@
 <?php use_stylesheet('commons/list.css') ?>
 <div id="list">
-     <table id="list_table">
+    <?php if ($pager->haveToPaginate()) { ?>
+        <div>
+            <?php include_partial('commons/pagingLinks', array('simplePager' => $pager)); ?>
+            <br />
+        </div>
+    <?php } ?>
+    <table id="list_table">
 
         <thead class="head">
             <tr>
-                <?php
-                foreach ($listHeaders as $headerVal) {
-                    echo '<th width=' . $headerVal['width'] . '>' . $headerVal['name'] . '</th>';
-                }
-                ?>
+            <?php
+            foreach ($listHeaders as $headerVal) {
+                echo '<th width=' . $headerVal['width'] . '>' . $headerVal['name'] . '</th>';
+            } 
+            ?>
             </tr>
         </thead>
 
         <tbody class="body">
             <?php
-            foreach ($listContents as $listContentVal) {
+            foreach ($listContents as $listContentRow) {
                 echo '<tr>';
-                 $count=0;
-                while(isset( $listContentVal[$count] )){
-                              echo '<td>' . $listContentVal[$count] . '</td>';
-                        $count++;
+                foreach ($listContentRow as $listContentColumn) {
+                    echo '<td>' . $listContentColumn . '</td>';
                 }
                 echo '</tr>';
             }

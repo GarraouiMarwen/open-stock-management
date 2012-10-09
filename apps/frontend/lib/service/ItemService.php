@@ -79,8 +79,16 @@ class ItemService {
     * Get data according to searching parameters
     * @param type $searchParam 
     */
-    public function searchItems($searchParam) {
-        return $this->getItemDao()->searchItems($searchParam);
+    public function searchItems(sfParameterHolder $paramHolder = null) {
+        return $this->getItemDao()->searchItems($paramHolder);
+    }
+    
+    /**
+     * Number og Items 
+     * @return Integer 
+     */
+    public function countItems() {
+        return $this->getItemDao()->countItems();
     }
     
 }

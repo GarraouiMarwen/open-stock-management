@@ -79,19 +79,32 @@ class ItemDao {
     /**
      * Get data according to searching parameters
      * @param type $searchParam
+     * @param sfParameterHolder $param
      * @return type
      * @throws DaoException 
      */
-    public function searchItems($searchParam) {
+    public function searchItems(sfParameterHolder $paramHolder) {
         try {
             $query = Doctrine_Query::create()
-                        ->select($searchParam)
+                        ->select($paramHolder->get('columns'))
                         ->from('item')
-                        ->orderBy('name');
+                        ->orderBy('name')
+                        ->offset($paramHolder->get('offset'))
+                        ->limit($paramHolder->get('limit'));
             return $query->execute(array() , Doctrine::HYDRATE_ARRAY);
         } catch (Exception $e) {
             throw new DaoException($e->getMessage(), $e->getCode(), $e);
         }
+    }
+    
+    /**
+     * Counting number items in Item table
+     * @return Integer 
+     */
+    public function countItems() {
+        $q = Doctrine_Query::create()
+            ->from('Item');
+        return $q->count();
     }
     
 }

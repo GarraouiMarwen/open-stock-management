@@ -11,9 +11,10 @@
  * @author guruce
  */
 class ListContainer {
-    private $listheaders;
+    private $headers;
     private $listContents;
     private $listName;
+    private $pager;
 
     /**
      * Gives array of headers
@@ -61,6 +62,25 @@ class ListContainer {
      */
     public function getListName() {
         return $this->listName;
+    }
+    
+    /**
+     * Set pagination parameter
+     * @param SimplePager $pager 
+     */
+    public function setPager(SimplePager $pager) {
+        $this->pager = $pager;
+    }
+    
+    /**
+     * Get pagination
+     * @return SimplePager 
+     */
+    public function getPager() {
+        if (empty($this->pager)) {
+            $this->pager = null;
+        }
+        return $this->pager;
     }
     
 }
