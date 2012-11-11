@@ -2,19 +2,19 @@
 listItem:
   header1: 
     name: No
-    width: 20px
+    width: 30px
     sortField: itemId
     elementType: link   
     elementProperty:    
   header2: 
     name: Name
-    width: 90px
+    width: 240px
     sortField: itemName
     elementType: link   
     elementProperty:       
   header3: 
     name: Sales Price 
-    width: 15px
+    width: 80px
     sortField: unitPrice
     elementType: link   
     elementProperty: 
@@ -32,7 +32,7 @@ listItem:
     elementProperty:
   header6: 
     name: Store
-    width: 15px
+    width: 40px
     sortField: storeAvailable
     elementType: link   
     elementProperty:

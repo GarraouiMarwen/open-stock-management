@@ -14,7 +14,7 @@
 #list_table .head tr
 {
     background-color: #E8E8E8;
-     border:2px solid;
+    border:2px solid;
     border-color: #E8E8E8;
     border-radius: 5px;
 }
@@ -23,19 +23,23 @@
     height: 30px;
     background-image: url("../../images/raw_back.png");
     background-repeat: repeat-x;
-    
-    border:2px solid;
-    border-color: #E8E8E8;
-    border-radius: 5px;
 }
 
-
-
-.items .name a:hover
+#list_table .body tr:hover
 {
-    text-decoration: underline;
+    height: 30px;
+    background-image: url("../../images/raw_hover.png");
+    background-repeat: repeat-x;
+
 }
 
-
-
-
+#list_table .body tr td:first-child 
+{ 
+    border-left: 2px solid #9cd5dc;
+    border-radius:  5px;
+}
+#list_table .body tr td:last-child 
+{ 
+    border-right:2px solid #9cd5dc;
+    border-radius:  5px; 
+}
