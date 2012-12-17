@@ -33,10 +33,10 @@ class listItemAction extends sfAction {
     public function execute($request) {
         
        $head = sfYaml::load(sfConfig::get('sf_app_dir') . '/lib/list/item_list.yml');
-       $itemlist_headers = array($head['listItem']['header1'],$head['listItem']['header2'],$head['listItem']['header3'],$head['listItem']['header6']);
+       $itemlist_headers = array($head['listItem']['header2'],$head['listItem']['header3'],$head['listItem']['header6']);
         $columns = 'name,sales_unit_price,stock_available';
         
-        $recordsLimit = 3; //have to take from lists
+        $recordsLimit = 5; //have to take from lists
         if (!$request->hasParameter('pageNo')) {
             $pageNo = 1;
         } else {
@@ -48,14 +48,14 @@ class listItemAction extends sfAction {
         $pager->setNumResults($this->getItemService()->countItems());
         $pager->init();
         $offset = $pager->getOffset();
-        $offset = empty($offset) ? 1 : $offset;
+        $offset = empty($offset) ? 0 : $offset;
         
         $paramHolder = new sfParameterHolder();
         $paramHolder->set('columns', $columns);
         $paramHolder->set('offset', $offset);
         $paramHolder->set('limit', $recordsLimit);
         
-        $itemlist_data = $this->getItemService()->searchItems($paramHolder);
+        $itemlist_data = $this->getItemService()->getItems($paramHolder);
         
         $listContainer = new ListContainer();
         $listContainer->setListName('ItemList');

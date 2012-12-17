@@ -56,15 +56,9 @@ class ItemService {
      * @return Item Doctrine-Collection 
      * edited by Jay Krish : to get the database output and insert some additional values into result rows
      */
-    public function getlistItems($columns) {
-        $result = $this->getItemDao()->getAllItems($columns);
-        $count = 0;
-        foreach ($result as $row){
-            //inserts an incremental number to all item list rows at first column
-            array_splice( $result[$count], 0, 0, $count+1);
-            $count++;
-        }
-        return $result;
+    public function getItems(sfParameterHolder $paramHolder = null) {
+        return $this->getItemDao()->getItems($paramHolder);
+
     }
     
     /**
@@ -80,7 +74,7 @@ class ItemService {
     * @param type $searchParam 
     */
     public function searchItems(sfParameterHolder $paramHolder = null) {
-        return $this->getItemDao()->searchItems($paramHolder);
+
     }
     
     /**

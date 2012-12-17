@@ -14,19 +14,19 @@ listItem:
     elementProperty:       
   header3: 
     name: Sales Price 
-    width: 80px
+    width: 120px
     sortField: unitPrice
     elementType: link   
     elementProperty: 
   header4: 
     name: Purchase price  
-    width: 15px
+    width: 120px
     sortField: unitPurchasePrice
     elementType: link   
     elementProperty:
   header5: 
     name: Description
-    width: 25px
+    width: 150px
     sortField: unitSalesPrice
     elementType: link   
     elementProperty:

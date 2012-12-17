@@ -41,12 +41,14 @@ class ItemDao {
      * @return Item Doctrine-Collection
      * @throws DaoException 
      */
-    public function getAllItems($columns) {
+    public function getItems(sfParameterHolder $paramHolder) {
         try {
             $query = Doctrine_Query::create()
-                        ->select($columns)
+                        ->select($paramHolder->get('columns'))
                         ->from('item')
-                        ->orderBy("name");
+                        ->orderBy('name')
+                        ->offset($paramHolder->get('offset'))
+                        ->limit($paramHolder->get('limit'));
             return $query->execute(array() , Doctrine::HYDRATE_NONE);
         } catch (Exception $e) {
             throw new DaoException($e->getMessage(), $e->getCode(), $e);
@@ -84,17 +86,7 @@ class ItemDao {
      * @throws DaoException 
      */
     public function searchItems(sfParameterHolder $paramHolder) {
-        try {
-            $query = Doctrine_Query::create()
-                        ->select($paramHolder->get('columns'))
-                        ->from('item')
-                        ->orderBy('name')
-                        ->offset($paramHolder->get('offset'))
-                        ->limit($paramHolder->get('limit'));
-            return $query->execute(array() , Doctrine::HYDRATE_ARRAY);
-        } catch (Exception $e) {
-            throw new DaoException($e->getMessage(), $e->getCode(), $e);
-        }
+
     }
     
     /**

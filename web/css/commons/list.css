@@ -11,25 +11,37 @@
     width:auto;
     height:auto;
 }
-#list_table .head tr
+#list_table .head tr 
 {
-    background-color: #E8E8E8;
-    border:2px solid;
-    border-color: #E8E8E8;
-    border-radius: 5px;
+    height: 35px;
+    background-image: url("../../images/raw_dark.png");
+    background-repeat: repeat-x;
+
 }
+#list_table .head tr th:first-child 
+{ 
+    border-left: 2px solid #9cd5dc;
+    border-radius:  5px;
+}
+#list_table .head tr th:last-child 
+{ 
+    border-right:2px solid #9cd5dc;
+    border-radius:  5px; 
+}
+
 #list_table .body tr
 {
     height: 30px;
-    background-image: url("../../images/raw_back.png");
+    background-image: url("../../images/raw_light.png");
     background-repeat: repeat-x;
 }
 
 #list_table .body tr:hover
 {
-    height: 30px;
-    background-image: url("../../images/raw_hover.png");
+    height: 35px;
+   background-image: url("../../images/raw_dark.png");
     background-repeat: repeat-x;
+
 
 }
 
