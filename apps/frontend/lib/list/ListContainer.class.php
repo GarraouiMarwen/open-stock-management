@@ -14,6 +14,7 @@ class ListContainer {
     private $headers;
     private $listContents;
     private $listName;
+    private $rowLink;
     private $pager;
 
     /**
@@ -63,7 +64,21 @@ class ListContainer {
     public function getListName() {
         return $this->listName;
     }
+    /**
+     * setting href link to naviage when a row is clicked
+     * @param type $listName 
+     */
+    public function setRowLink($rowLink) {
+        $this->rowLink = $rowLink;
+    }
     
+    /**
+     * Get row link of the List
+     * @return type 
+     */
+    public function getRowLink() {
+        return $this->rowLink;
+    }
     /**
      * Set pagination parameter
      * @param SimplePager $pager 

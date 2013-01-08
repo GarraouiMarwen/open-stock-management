@@ -1,0 +1,38 @@
+## YAML Template.
+listSeller:
+  header1: 
+    name: ID
+    width: 30px
+    sortField: 
+    elementType: link   
+    elementProperty:    
+  header2: 
+    name: Supplier Name
+    width: 240px
+    sortField: 
+    elementType: link   
+    elementProperty:       
+  header3: 
+    name: Address 
+    width: 150px
+    sortField: 
+    elementType: link   
+    elementProperty: 
+  header4: 
+    name: TP HP  
+    width: 120px
+    sortField: 
+    elementType: link   
+    elementProperty:
+  header5: 
+    name: TP Home
+    width: 120px
+    sortField: 
+    elementType: link   
+    elementProperty:
+  header6: 
+    name: Notes
+    width: 40px
+    sortField: 
+    elementType: link   
+    elementProperty:

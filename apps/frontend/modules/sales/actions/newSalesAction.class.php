@@ -21,7 +21,7 @@ class newSalesAction extends sfAction {
      * @param type $request 
      */
     public function execute($request) {
-        
+        $this->form = new SalesOrderForm();
     }
 
 }

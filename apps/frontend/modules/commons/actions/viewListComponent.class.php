@@ -17,6 +17,7 @@ class viewListComponent  extends sfComponent {
         $this->listName = $this->container->getListName();
         $this->listHeaders = $this->container->getListHeaders();
         $this->listContents = $this->container->getListContent();
+        $this->rowlink = $this->container->getRowLink();
         $this->pager = $this->container->getPager();
     }
           // TODO If u need create any methods 

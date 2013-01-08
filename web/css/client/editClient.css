@@ -1,0 +1,57 @@
+/* 
+    Document   : addClient
+    Created on : Aug 30, 2012, 1:39:42 AM
+    Author     : jaykrish
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#editclient_contents
+{
+    position: absolute;
+    left:145px;
+    margin: 20px;
+}
+#options
+{
+    width:400px;
+    height:50px;
+}
+
+#editclient_contents form table tbody tr td input 
+{
+    height: 25px;
+    font-size: 16pt;
+    font-weight: 300;
+    margin: 2px;
+
+}
+
+#editclient_contents form table tbody tr th 
+{
+    height: 25px;
+    font-size: 16pt;
+    font-weight: 300;
+
+}
+
+#editclient_contents form table tfoot tr td button {
+    height: 54px;
+    display: block;
+    float: right;
+    color: black;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 10px;
+    background-image:url(../../images/menu_hover.png);
+    background-repeat:repeat-x;
+    padding: 10px;
+}
+#editclient_contents form table tfoot tr td button:hover {
+    float: right;
+    background-image:url(../../images/menu_back.png);
+    background-repeat:repeat-x;
+    padding: 10px;
+}
+
+

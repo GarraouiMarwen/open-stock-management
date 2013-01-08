@@ -26,9 +26,9 @@
                 
                 echo '<tr>';
                 $count++;
-                echo '<td><a href="'.url_for('stock/showItem?id='.$listContentRow[0]).'">'.$count.'</a></td>';
+                echo "<td><a href='".url_for($rowlink.$listContentRow[0])."'>".$count.'</a></td>';
                 foreach ($listContentRow as $listContentColumn) {
-                    echo '<td><a href="'.url_for('stock/showItem?id='.$listContentRow[0]).'">'. $listContentColumn . '</td>';
+                    echo "<td><a href='".url_for($rowlink.$listContentRow[0])."'>". $listContentColumn . '</td>';
                 }
                 echo '</tr>';
             }

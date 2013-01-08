@@ -1,0 +1,19 @@
+/* 
+    Document   : listSeller
+    Created on : Jan 8, 2013, 4:56:21 PM
+    Author     : jaykrish
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#listseller_contents
+{
+    position: absolute;
+    left:145px;
+    margin: 20px;
+}
+#options
+{
+    width:400px;
+    height:50px;
+}

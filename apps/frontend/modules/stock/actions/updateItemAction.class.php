@@ -6,13 +6,13 @@
  */
 
 /**
- * Description of newItemAction
+ * Description of createContactAction
  *
- * @author guruce
+ * @author jaykrish
  */
-class editItemAction extends sfAction{
-    
-    
+class updateItemAction extends sfAction {
+
+    //put your code here
         private $itemService;
 
     /**
@@ -25,19 +25,28 @@ class editItemAction extends sfAction{
         }
         return $this->itemService;
     }
-    /**
-     * Execute /../default/newdItem
-     * 
-     * @param type $request 
-     */
+    
+    
     public function execute($request) {
-
         $this->item = ($this->getItemService()->getItemById($request->getParameter('id')));
         $this->forward404Unless($this->item);
         $this->form = new ItemForm($this->item);
-
+        $this->processForm($request, $this->form);
+        $this->setTemplate('editItem');
     }
-    
+
+    protected function processForm(sfWebRequest $request, sfForm $form) {
+        $form->bind(
+                $request->getParameter($form->getName()), $request->getFiles($form->getName())
+        );
+
+        if ($form->isValid()) {
+            $item = $form->save();
+
+            $this->redirect('stock/showItem?id='.$item->getId()."'");
+        }
+    }
+
 }
 
 ?>

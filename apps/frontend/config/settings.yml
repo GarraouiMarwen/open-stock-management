@@ -25,7 +25,8 @@ test:
 all:
   .settings:
     # Form security secret (CSRF protection)
-    csrf_secret:            f8c974ffc2cc4f9ecb947d415aedac81d282dc63
+    #csrf_secret:            f8c974ffc2cc4f9ecb947d415aedac81d282dc63
+    #removed by Jaykrish to avoid error on edit data using sfform
 
     # Output escaping settings
     escaping_strategy:      true

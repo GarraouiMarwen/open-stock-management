@@ -43,6 +43,9 @@ abstract class BaseSalesOrderForm extends BaseFormDoctrine
     ));
 
     $this->widgetSchema->setNameFormat('sales_order[%s]');
+    
+    //calerder picker plugin's
+    $this->widgetSchema['date_begin']= new sfWidgetFormDateJQueryUI(array('change_month' => true, 'change_year'=> true));
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
 

@@ -1,0 +1,58 @@
+/* 
+    Document   : showItem
+    Created on : Jan 7, 2013, 12:54:19 PM
+    Author     : jaykrish
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#showseller_contents
+{
+    position: absolute;
+    left:145px;
+    margin: 20px;
+}
+
+#options
+{
+    width:400px;
+    height:50px;
+}
+
+#showseller_contents  table tbody tr{
+    height: 25px;
+}
+
+#showseller_contents  table tbody tr th  
+{
+    width: 140px;
+
+}
+
+#showseller_contents  table tbody tr td  
+{
+    height: 25px;
+    font-size: 16pt;
+    font-weight: 300;
+    margin: 2px;
+
+}
+
+#showseller_contents  table tfoot tr td button {
+    height: 54px;
+    display: block;
+    float: right;
+    color: black;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 10px;
+    background-image:url(../../images/menu_back.png);
+    background-repeat:repeat-x;
+    padding: 10px;
+}
+#showseller_contents  table tfoot tr td button:hover {
+    float: right;
+    background-image:url(../../images/menu_hover.png);
+    background-repeat:repeat-x;
+    padding: 10px;
+}
