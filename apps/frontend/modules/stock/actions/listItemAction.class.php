@@ -33,8 +33,8 @@ class listItemAction extends sfAction {
     public function execute($request) {
         
        $head = sfYaml::load(sfConfig::get('sf_app_dir') . '/lib/list/item_list.yml');
-       $itemlist_headers = array($head['listItem']['header2'],$head['listItem']['header3'],$head['listItem']['header6']);
-        $columns = 'name,sales_unit_price,stock_available';
+       $itemlist_headers = array($head['listItem']['header1'],$head['listItem']['header2'],$head['listItem']['header3'],$head['listItem']['header6']);
+        $columns = 'id,name,sales_unit_price,stock_available';
         
         $recordsLimit = 5; //have to take from lists
         if (!$request->hasParameter('pageNo')) {

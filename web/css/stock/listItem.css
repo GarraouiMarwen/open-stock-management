@@ -5,14 +5,13 @@
     Description:
         Purpose of the stylesheet follows.
 */
-#item_list
+#listitem_contants
 {
     position: absolute;
-    left:125px;
-    width:400px;
-    height:600px;
+    left:145px;
+    margin: 20px;
 }
-#table_options
+#options
 {
     width:400px;
     height:50px;

@@ -10,7 +10,7 @@
  *
  * @author guruce
  */
-class editItemAction extends sfAction{
+class showItemAction extends sfAction{
     
     
         private $itemService;

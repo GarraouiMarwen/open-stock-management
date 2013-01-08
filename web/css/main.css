@@ -7,7 +7,7 @@ body
     text-align: left;
     font: 16px Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: #061C37;
+    
     /*  background: #F2F2F2;*/
 
 }
@@ -33,7 +33,7 @@ body
 {
     height:50px;
     width:1200px;
-    background-color: #EBF2FF;
+    background-color: #f4f4f4;
 
 }
 
@@ -41,35 +41,43 @@ body
 {
     position:absolute;
     text-align:left;
-    color:#FFFFFF;
-    font-size:30px;
-    color:#FFF;	
+    color:darkblue;
+    font-size:20px;
     left:14px;
-    top:10px;
+    top:5px;
 }
-
 
 #main_header h2
 {
     position:absolute;
     text-align:right;
-    color:#EAEAEA;
-    left:600px;
-    top:30px;
-    width:400px;
+    color:black;
+    font-size:10px;
+    left:1000px;
+    top:35px;
+}
+
+#main_header #txt
+{
+    position:absolute;
+    text-align:center;
+    color:black;
+    left:500px;
+    top:10px;
     font-size:15px;
 }
 
 
 .off
 {
-    color:#000000;
+    color:#032c96;
 }
 
 
 #main_menu
 {
-    display:block;
+    
+    /*display:block;*/
     width:1200px;
     height:54px;
 
@@ -112,8 +120,8 @@ body
 {
     list-style: none;
     padding: 0px;
-    margin-left:auto;
-    width:960px;
+    margin-left:140px;
+    width:1060px;
 }
 
 #main_menu li 
@@ -131,7 +139,7 @@ body
     display: block;
     text-align: center;
     text-decoration: none;
-    color: #ffffff;
+    color: black;
     font-weight: bold;
     padding-top: 18px;
     font-size: 15px;

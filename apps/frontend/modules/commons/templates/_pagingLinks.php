@@ -1,34 +1,33 @@
 <?php use_stylesheet('commons/pagingLinks.css'); ?>
 
 <div class="pagination">
-    <table id="pagination_table">
+    <ul>
         <tr>
 
             <?php $currentURL = sfContext::getInstance()->getRouting()->getCurrentInternalUri(); ?>
-            <td>
+            <li>
                 <a href="<?php echo url_for($currentURL) ?>?pageNo=1"><< </a>
-
-            <td>    
+            </li>
+            <li>    
                 <a href="<?php echo url_for($currentURL) ?>?pageNo=<?php echo $simplePager->getPreviousPage() ?>">< </a>
-            </td>
+            </li>
 
 
        <?php foreach ($simplePager->getLinks() as $page): ?>
                 <?php if ($page == $simplePager->getPage()): ?>
-                    <?php echo '<td>'. $page .'</td>' ?>
+                    <?php echo '<li><a id="current">'. $page .'</a></li>' ?>
                 <?php else: ?>
-                <a href="<?php echo url_for($currentURL) ?>?pageNo=<?php echo '<td>' . $page . '</td>' ?>"><?php echo '<td>' . $page . '</td>' ?></a>
+            <li><a href="<?php echo url_for($currentURL) ?>?pageNo=<?php echo  $page  ?>"><?php echo  $page  ?></a></li>
             <?php endif; ?>
         <?php endforeach; ?>
 
-        <td>
+        <li>
             <a href="<?php echo url_for($currentURL) ?>?pageNo=<?php echo $simplePager->getNextPage() ?>">></a>
-        </td>
+        </li>
 
-        <td>
+        <li>
             <a href="<?php echo url_for($currentURL) ?>?pageNo=<?php echo $simplePager->getLastPage() ?>">>></a> 
-        </td>
+        </li>
 
-        </tr>
-    </table>
+        </ul>
 </div>

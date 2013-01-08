@@ -10,7 +10,7 @@
  *
  * @author jaykrish
  */
-class homeContactsAction extends sfActions{
+class homeContactAction extends sfActions{
     //put your code here
         /**
      * Execute /../contacts/homeContacts

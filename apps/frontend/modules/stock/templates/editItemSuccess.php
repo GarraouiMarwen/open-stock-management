@@ -4,6 +4,7 @@ include_component("commons", "leftSidebar",array("menu1"=>"NewItem;stock/newItem
 
 <div id="item_add">
 <?php
-echo 'edit item test. OK';
+
+
 ?>
 </div>

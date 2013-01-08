@@ -18,11 +18,7 @@ class newItemAction extends sfAction{
      * @param type $request 
      */
     public function execute($request) {
-        $query = Doctrine_Core::getTable('Item')
-                ->createQuery('i');
-
-        $data = $query->execute();
-        $this->data = $data;
+        $this->form=new ItemForm();
     }
 }
 

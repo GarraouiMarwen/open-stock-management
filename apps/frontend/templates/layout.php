@@ -8,9 +8,10 @@
         include_http_metas();
         include_metas();
         include_stylesheets();
-        use_javascript('jquery-1.8.0.min.js');
-        use_javascript('main.js');
         include_javascripts();
+        use_javascript('js/jquery-1.8.0.min.js');
+        use_javascript('main.js');
+        
 
         //  get the module name
         $pageOn = ($sf_params->get("module"));
@@ -20,14 +21,16 @@
         <title>
             <?php include_slot('pageinfo'); ?>
         </title>
+
     </head>
     <body>
 
         <div id="main_container">
 
             <div id="main_header">
-                <h1>Web<span class="off">app</span> </h1>
-                <h2>template by -jaykrish </h2>
+                <h1>The Client Company Name</h1>
+                <h2> <span class="off"> Arima </span>Retail Management System</h2>
+                <div id="txt">Clock by JavaScript</div>
             </div>   
 
             <div id="main_menu">
@@ -49,7 +52,7 @@
 
             </div>
 
-            <div id="main_footer"><h3><a href="#">Neat web design</a></h3></div>
+            <div id="main_footer"><h3><a href="#">Arima web design</a></h3></div>
 
         </div>
     </body>

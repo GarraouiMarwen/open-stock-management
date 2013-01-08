@@ -23,11 +23,12 @@
             <?php
             $count=0;
             foreach ($listContents as $listContentRow) {
+                
                 echo '<tr>';
                 $count++;
-                echo '<td>'.$count.'</td>';
+                echo '<td><a href="'.url_for('stock/showItem?id='.$listContentRow[0]).'">'.$count.'</a></td>';
                 foreach ($listContentRow as $listContentColumn) {
-                    echo '<td>' . $listContentColumn . '</td>';
+                    echo '<td><a href="'.url_for('stock/showItem?id='.$listContentRow[0]).'">'. $listContentColumn . '</td>';
                 }
                 echo '</tr>';
             }

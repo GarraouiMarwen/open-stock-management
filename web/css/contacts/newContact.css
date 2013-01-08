@@ -1,0 +1,42 @@
+#newcontact_contents
+{
+    position: absolute;
+    left:145px;
+    margin: 80px;
+}
+
+#newcontact_contents form table tbody tr td input 
+{
+    height: 25px;
+    font-size: 16pt;
+    font-weight: 300;
+    margin: 2px;
+
+}
+
+#newcontact_contents form table tbody tr th 
+{
+    height: 25px;
+    font-size: 16pt;
+    font-weight: 300;
+
+}
+
+#newcontact_contents form table tfoot tr td button {
+    height: 54px;
+    display: block;
+    float: right;
+    color: black;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 10px;
+    background-image:url(../../images/menu_hover.png);
+    background-repeat:repeat-x;
+    padding: 10px;
+}
+#newcontact_contents form table tfoot tr td button:hover {
+    float: right;
+    background-image:url(../../images/menu_back.png);
+    background-repeat:repeat-x;
+    padding: 10px;
+}

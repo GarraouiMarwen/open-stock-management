@@ -1,7 +1,7 @@
 ## YAML Template.
 listItem:
   header1: 
-    name: No
+    name: ItemID
     width: 30px
     sortField: itemId
     elementType: link   

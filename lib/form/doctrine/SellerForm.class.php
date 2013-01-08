@@ -12,9 +12,9 @@ class SellerForm extends BaseSellerForm
 {
   public function configure()
   {
-      $this->useFields(array('name', 'address', 'tp_hp', 'tp_home', 'notes'));
-      $this->validatorSchema['address'] = new sfValidatorEmail();
-
+     // $this->useFields(array('name', 'address', 'tp_hp', 'tp_home', 'notes'));
+     // $this->validatorSchema['address'] = new sfValidatorEmail();
+      unset($this['created_at'], $this['updated_at']);
 
   }
 }
