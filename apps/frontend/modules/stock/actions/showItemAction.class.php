@@ -10,10 +10,9 @@
  *
  * @author guruce
  */
-class showItemAction extends sfAction{
-    
-    
-        private $itemService;
+class showItemAction extends sfAction {
+
+    private $itemService;
 
     /**
      * 
@@ -25,6 +24,7 @@ class showItemAction extends sfAction{
         }
         return $this->itemService;
     }
+
     /**
      * Execute /../default/newdItem
      * 
@@ -32,9 +32,12 @@ class showItemAction extends sfAction{
      */
     public function execute($request) {
 
-        $this->item = ($this->getItemService()->getItemById($request->getParameter('id')));
-        $this->forward404Unless($this->item);
-
+        if (!$request->hasParameter('id')) {
+            $this->item = ($this->getRoute()->getObject());
+        } else {
+            $this->item = ($this->getItemService()->getItemById($request->getParameter('id')));
+            $this->forward404Unless($this->item);
+        }
     }
 
 }

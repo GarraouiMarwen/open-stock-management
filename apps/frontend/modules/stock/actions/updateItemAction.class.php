@@ -13,22 +13,9 @@
 class updateItemAction extends sfAction {
 
     //put your code here
-        private $itemService;
-
-    /**
-     * 
-     * @return ItemService 
-     */
-    public function getItemService() {
-        if (!($this->itemService instanceof ItemService)) {
-            $this->itemService = new ItemService();
-        }
-        return $this->itemService;
-    }
-    
-    
+   
     public function execute($request) {
-        $this->item = ($this->getItemService()->getItemById($request->getParameter('id')));
+        $this->item = ($this->getRoute()->getObject());
         $this->forward404Unless($this->item);
         $this->form = new ItemForm($this->item);
         $this->processForm($request, $this->form);
@@ -42,8 +29,7 @@ class updateItemAction extends sfAction {
 
         if ($form->isValid()) {
             $item = $form->save();
-
-            $this->redirect('stock/showItem?id='.$item->getId()."'");
+            $this->redirect('show_item',$item);
         }
     }
 

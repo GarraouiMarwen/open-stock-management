@@ -28,7 +28,7 @@ class createItemAction extends sfAction {
         if ($form->isValid()) {
             $item = $form->save();
 
-            $this->redirect('stock/showItem?id='.$item->getId()."'");
+            $this->redirect('show_item',$item);
         }
     }
 

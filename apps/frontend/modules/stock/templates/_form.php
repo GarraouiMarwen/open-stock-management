@@ -1,12 +1,20 @@
 
-<form action="<?php echo url_for('stock/' . ($form->getObject()->isNew() ? 'createItem' : 'updateItem') . (!$form->getObject()->isNew() ? '?id=' . $form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+<form action="<?php
+        if ($form->getObject()->isNew()) {
+            echo url_for('stock/createItem');
+        }
+        else
+            echo url_for('update_item',$item);
+    ?>"
+      method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+    
     <?php if (!$form->getObject()->isNew()): ?>
         <input type="hidden" name="sf_method" value="put" />
-    <?php endif; ?>
+<?php endif; ?>
     <table >
 
         <tbody>
-            <?php echo $form ?>
+<?php echo $form ?>
         </tbody>
         <tfoot>
             <tr>

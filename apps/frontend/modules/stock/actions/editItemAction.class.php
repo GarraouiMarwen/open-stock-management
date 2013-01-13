@@ -11,20 +11,8 @@
  * @author guruce
  */
 class editItemAction extends sfAction{
-    
-    
-        private $itemService;
+       
 
-    /**
-     * 
-     * @return ItemService 
-     */
-    public function getItemService() {
-        if (!($this->itemService instanceof ItemService)) {
-            $this->itemService = new ItemService();
-        }
-        return $this->itemService;
-    }
     /**
      * Execute /../default/newdItem
      * 
@@ -32,7 +20,7 @@ class editItemAction extends sfAction{
      */
     public function execute($request) {
 
-        $this->item = ($this->getItemService()->getItemById($request->getParameter('id')));
+        $this->item = ($this->getRoute()->getObject());
         $this->forward404Unless($this->item);
         $this->form = new ItemForm($this->item);
 

@@ -2,7 +2,7 @@
 include_component("commons", "leftSidebar", array("menu1" => "NewItem;stock/newItem", "menu2" => "AllItems;stock/listItem", "menu3" => "Review;stock/reviewItem"));
 use_stylesheet('stock/showItem.css')
 ?>
-<form action =<?php echo url_for('stock/editItem?id='.$item->getId())?>>
+<form action =<?php echo url_for('edit_item',$item)?>>
 <div id="showitem_contents">
     <div id="options"></div>
     <table>

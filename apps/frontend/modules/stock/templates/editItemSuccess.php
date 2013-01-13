@@ -5,7 +5,7 @@ include_component("commons", "leftSidebar",array("menu1"=>"NewItem;stock/newItem
 <div id="edititem_contents">
     <div id="options"></div>
 
-<?php include_partial('form', array('form' => $form)); ?>
+<?php include_partial('form', array('form' => $form,'item' => $item)); ?>
 
     
 </div>
