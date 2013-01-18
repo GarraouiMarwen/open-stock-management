@@ -13,6 +13,13 @@ update_item:
   options: { model: Item, type: object }
   param:   { module: stock, action: updateItem }
   requirements: { sf_method: put }
+  
+delete_item:
+  url:     /stock/deleteItem/:id
+  class:   sfDoctrineRoute
+  options: { model: Item, type: object }
+  param:   { module: stock, action: deleteItem }
+  requirements: { sf_method: delete }
    
 show_item:
   url:     /stock/showItem/:name
