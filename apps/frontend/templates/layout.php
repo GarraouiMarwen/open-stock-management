@@ -7,11 +7,11 @@
         //php inclutions 
         include_http_metas();
         include_metas();
-        include_stylesheets();
-        include_javascripts();
-        use_javascript('js/jquery-1.8.0.min.js');
+        
+        use_javascript('jqueryV1.9.0.min.js');
         use_javascript('main.js');
-
+        include_javascripts();
+        include_stylesheets();
 
         //  get the module name
         $pageOn = ($sf_params->get("module"));
@@ -30,7 +30,7 @@
             <div id="main_header">
                 <h1>The Client Company Name</h1>
                 <h2> <span class="off"> Arima </span>Retail Management System</h2>
-                <div id="txt">Clock by JavaScript</div>
+                <div id="clock">Clock</div>
             </div>   
 
             <div id="main_menu">
