@@ -32,9 +32,12 @@ class showSellerAction extends sfAction{
      */
     public function execute($request) {
 
+        if (!$request->hasParameter('id')) {
+            $this->seller = ($this->getRoute()->getObject());
+        } else {
         $this->seller = ($this->getSellerService()->getSellerById($request->getParameter('id')));
         $this->forward404Unless($this->seller);
-
+        }
     }
 
 }

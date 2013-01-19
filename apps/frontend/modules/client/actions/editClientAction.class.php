@@ -10,21 +10,8 @@
  *
  * @author guruce
  */
-class editClientAction extends sfAction{
-    
-    
-        private $clientService;
+class editClientAction extends sfAction {
 
-    /**
-     * 
-     * @return ClientService 
-     */
-    public function getClientService() {
-        if (!($this->clientService instanceof ClientService)) {
-            $this->clientService = new ClientService();
-        }
-        return $this->clientService;
-    }
     /**
      * Execute /../default/newdClient
      * 
@@ -32,12 +19,11 @@ class editClientAction extends sfAction{
      */
     public function execute($request) {
 
-        $this->client = ($this->getClientService()->getClientById($request->getParameter('id')));
+        $this->client = ($this->getRoute()->getObject());
         $this->forward404Unless($this->client);
         $this->form = new ClientForm($this->client);
-
     }
-    
+
 }
 
 ?>

@@ -2,7 +2,7 @@
 include_component("commons", "leftSidebar", array("menu1" => "NewCustomer;client/newClient", "menu2" => "AllCustomers;client/listClient", "menu3" => "Review;client/reviewClient"));
 use_stylesheet('client/showClient.css')
 ?>
-<form action =<?php echo url_for('client/editClient?id='.$client->getId())?>>
+
 <div id="showclient_contents">
     <div id="options"></div>
     <table>
@@ -18,14 +18,18 @@ use_stylesheet('client/showClient.css')
         <tfoot>
             <tr>
                 <td colspan="2">
-                    <button type="submit" value="submit" >Edit this Customer..</button>
+                    <form action = "<?php echo url_for('delete_client', $client, array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>" method ="post">
+                        <input type="hidden" name="sf_method" value="delete" />
+                        <button type="submit" value="submit" >Remove this customer..</button>
+                    </form>  
+
+
+                    <form action = "<?php echo url_for('edit_client', $client) ?>">
+                        <button type="submit" value="submit" >Edit this customer..</button>
+                    </form>  
                 </td>
             </tr>
         </tfoot>
-
-
-
     </table>
 
 </div>
-</form>

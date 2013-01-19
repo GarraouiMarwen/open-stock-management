@@ -1,6 +1,9 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+
+#Module : stock
+###############################################################################
 edit_item:
   url:     /stock/editItem/:name
   class:   sfDoctrineRoute
@@ -27,6 +30,65 @@ show_item:
   options: { model: Item, type: object }
   param:   { module: stock, action: showItem }
 
+
+
+#Module : seller
+###############################################################################
+edit_seller:
+  url:     /seller/editSeller/:name
+  class:   sfDoctrineRoute
+  options: { model: Seller, type: object }
+  param:   { module: seller, action: editSeller }
+
+update_seller:
+  url:     /seller/updateSeller/:name
+  class:   sfDoctrineRoute
+  options: { model: Seller, type: object }
+  param:   { module: seller, action: updateSeller }
+  requirements: { sf_method: put }
+  
+delete_seller:
+  url:     /seller/deleteSeller/:id
+  class:   sfDoctrineRoute
+  options: { model: Seller, type: object }
+  param:   { module: seller, action: deleteSeller }
+  requirements: { sf_method: delete }
+   
+show_seller:
+  url:     /seller/showSeller/:name
+  class:   sfDoctrineRoute
+  options: { model: Seller, type: object }
+  param:   { module: seller, action: showSeller }
+
+
+
+#Module : client
+###############################################################################
+edit_client:
+  url:     /client/editClient/:name
+  class:   sfDoctrineRoute
+  options: { model: Client, type: object }
+  param:   { module: client, action: editClient }
+
+update_client:
+  url:     /client/updateClient/:name
+  class:   sfDoctrineRoute
+  options: { model: Client, type: object }
+  param:   { module: client, action: updateClient }
+  requirements: { sf_method: put }
+  
+delete_client:
+  url:     /client/deleteClient/:id
+  class:   sfDoctrineRoute
+  options: { model: Client, type: object }
+  param:   { module: client, action: deleteClient }
+  requirements: { sf_method: delete }
+   
+show_client:
+  url:     /client/showClient/:name
+  class:   sfDoctrineRoute
+  options: { model: Client, type: object }
+  param:   { module: client, action: showClient }
 # default rules
 homepage:
   url:   /

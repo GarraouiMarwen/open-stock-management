@@ -1,5 +1,13 @@
 
-<form action="<?php echo url_for('seller/' . ($form->getObject()->isNew() ? 'createSeller' : 'updateSeller') . (!$form->getObject()->isNew() ? '?id=' . $form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+<form action="<?php
+if ($form->getObject()->isNew()) {
+    echo url_for('seller/createSeller');
+}
+else
+    echo url_for('update_seller', $seller);
+?>"
+      method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+
     <?php if (!$form->getObject()->isNew()): ?>
         <input type="hidden" name="sf_method" value="put" />
     <?php endif; ?>

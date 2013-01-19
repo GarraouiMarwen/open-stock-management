@@ -28,7 +28,7 @@ class createSellerAction extends sfAction {
         if ($form->isValid()) {
             $seller = $form->save();
 
-            $this->redirect('seller/showSeller?id='.$seller->getId()."'");
+            $this->redirect('show_seller', $seller);
         }
     }
 

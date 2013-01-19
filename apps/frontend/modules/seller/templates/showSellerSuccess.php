@@ -2,7 +2,7 @@
 include_component("commons", "leftSidebar", array("menu1" => "NewSupplier;seller/newSeller", "menu2" => "AllSuppliers;seller/listSeller", "menu3" => "Review;seller/reviewSeller"));
 use_stylesheet('seller/showSeller.css')
 ?>
-<form action =<?php echo url_for('seller/editSeller?id='.$seller->getId())?>>
+
 <div id="showseller_contents">
     <div id="options"></div>
     <table>
@@ -18,14 +18,17 @@ use_stylesheet('seller/showSeller.css')
         <tfoot>
             <tr>
                 <td colspan="2">
-                    <button type="submit" value="submit" >Edit this Supplier..</button>
+                    <form action = "<?php echo url_for('delete_seller', $seller, array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>" method ="post">
+                        <input type="hidden" name="sf_method" value="delete" />
+                        <button type="submit" value="submit" >Remove this supplier..</button>
+                    </form>  
+                    
+                    <form action = "<?php echo url_for('edit_seller', $seller) ?>">
+                        <button type="submit" value="submit" >Edit this supplier..</button>
+                    </form>  
                 </td>
             </tr>
         </tfoot>
-
-
-
     </table>
 
 </div>
-</form>

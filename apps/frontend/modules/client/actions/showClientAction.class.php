@@ -10,10 +10,9 @@
  *
  * @author guruce
  */
-class showClientAction extends sfAction{
-    
-    
-        private $clientService;
+class showClientAction extends sfAction {
+
+    private $clientService;
 
     /**
      * 
@@ -25,6 +24,7 @@ class showClientAction extends sfAction{
         }
         return $this->clientService;
     }
+
     /**
      * Execute /../default/newdClient
      * 
@@ -32,9 +32,13 @@ class showClientAction extends sfAction{
      */
     public function execute($request) {
 
-        $this->client = ($this->getClientService()->getClientById($request->getParameter('id')));
-        $this->forward404Unless($this->client);
+        if (!$request->hasParameter('id')) {
+            $this->client = ($this->getRoute()->getObject());
+        } else {
 
+            $this->client = ($this->getClientService()->getClientById($request->getParameter('id')));
+            $this->forward404Unless($this->client);
+        }
     }
 
 }

@@ -28,7 +28,7 @@ class createClientAction extends sfAction {
         if ($form->isValid()) {
             $client = $form->save();
 
-            $this->redirect('client/showClient?id='.$client->getId()."'");
+            $this->redirect('show_client', $client);
         }
     }
 

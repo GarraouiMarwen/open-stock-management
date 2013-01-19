@@ -13,18 +13,6 @@
 class editSellerAction extends sfAction{
     
     
-        private $sellerService;
-
-    /**
-     * 
-     * @return SellerService 
-     */
-    public function getSellerService() {
-        if (!($this->sellerService instanceof SellerService)) {
-            $this->sellerService = new SellerService();
-        }
-        return $this->sellerService;
-    }
     /**
      * Execute /../default/newdSeller
      * 
@@ -32,7 +20,7 @@ class editSellerAction extends sfAction{
      */
     public function execute($request) {
 
-        $this->seller = ($this->getSellerService()->getSellerById($request->getParameter('id')));
+        $this->seller = ($this->getRoute()->getObject());
         $this->forward404Unless($this->seller);
         $this->form = new SellerForm($this->seller);
 
