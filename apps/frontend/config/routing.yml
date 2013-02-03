@@ -89,6 +89,16 @@ show_client:
   class:   sfDoctrineRoute
   options: { model: Client, type: object }
   param:   { module: client, action: showClient }
+  
+#Module : sales
+###############################################################################  
+
+show_sales:
+  url:     /sales/showSales
+  class:   sfDoctrineRoute
+  options: { model: SalesOrder, type: object }
+  param:   { module: sales, action: showSales }
+
 # default rules
 homepage:
   url:   /

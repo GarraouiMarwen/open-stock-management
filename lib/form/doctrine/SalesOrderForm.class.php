@@ -13,5 +13,9 @@ class SalesOrderForm extends BaseSalesOrderForm
   public function configure()
   {
       unset($this['created_at'], $this['updated_at']);
+      $this->widgetSchema['total_price']->setAttribute('disabled', 'disabled');
+     $this->widgetSchema['total_paid']->setAttribute('disabled', 'disabled');
+     $this->widgetSchema['total_due']->setAttribute('disabled', 'disabled');
+     $this->widgetSchema['order_status']->setAttribute('disabled', 'disabled');
   }
 }

@@ -23,7 +23,7 @@ abstract class BaseSalesOrderForm extends BaseFormDoctrine
       'total_paid'   => new sfWidgetFormInputText(),
       'total_due'    => new sfWidgetFormInputText(),
       'order_status' => new sfWidgetFormInputText(),
-      'notes'        => new sfWidgetFormInputText(),
+      'notes'        => new sfWidgetFormTextArea(),
       'created_at'   => new sfWidgetFormDateTime(),
       'updated_at'   => new sfWidgetFormDateTime(),
     ));
@@ -46,6 +46,7 @@ abstract class BaseSalesOrderForm extends BaseFormDoctrine
     
     //calerder picker plugin's
     $this->widgetSchema['date_begin']= new sfWidgetFormDateJQueryUI(array('change_month' => true, 'change_year'=> true));
+    $this->widgetSchema['date_end']= new sfWidgetFormDateJQueryUI(array('change_month' => true, 'change_year'=> true));
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
 

@@ -1,0 +1,46 @@
+/* 
+    Document   : salesorderheader
+    Created on : Jan 19, 2013, 11:56:30 PM
+    Author     : jaykrish
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+form .order_info, .order_details,.detail_submit{
+    padding:5px;
+    float:left;
+}
+form .detail_submit{
+    padding-top:60px;
+}
+
+form .order_info tbody tr td input , .order_details tbody tr td input 
+{
+    font-size: 12pt;
+    font-weight: 100;
+    width: 120px;
+    margin: 2px;
+    margin-right: 25px;
+}
+
+form .order_info tbody tr th ,.order_details tbody tr th 
+{
+    font-size: 12pt;
+    font-weight: 100;
+}
+
+form .detail_submit tr td button {
+    
+    height: 54px;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 10px;
+    background-image:url(../../images/menu_hover.png);
+    background-repeat:repeat-x;
+
+}
+form .detail_submit tr td button:hover {
+    background-image:url(../../images/menu_back.png);
+    background-repeat:repeat-x;
+
+}
